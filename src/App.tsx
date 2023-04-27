@@ -4,10 +4,59 @@ import './App.css';
 import {Button} from "./Button/Button";
 import {NewComponents} from "./NewComponents";
 import {subscribe} from "diagnostics_channel";
+import {cleanup} from "@testing-library/react";
 
 function App() {
+    let [a, setA] = useState(1)
+    const onclickHandler=()=>{
+        setA(++a);
+        console.log(a)
+    }
+    const onclickHandler1=()=>{
+        setA(0)
+    }
+    return(
+        <div className={"App"}>
+            <h1>{a}</h1>
+            <button onClick={onclickHandler}>number</button>
+            <button onClick={onclickHandler1}>0</button>
+        </div>
+    );
+}
 
-    const Button1Foo = (subscriber: string, age: number) => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* const Button1Foo = (subscriber: string, age: number) => {
         console.log(subscriber, age)
     }
     const Button2Foo = (subscriber: string) => {
@@ -25,8 +74,8 @@ function App() {
             <Button name={'stupid'} callBack={Button3Foo}/>
 
         </div>
-    );
-}
+    );*/
+
 
 
 /*
