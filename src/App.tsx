@@ -1,17 +1,38 @@
 import React, {useState} from 'react';
+import {MouseEvent} from "react";
 import './App.css';
+import {Button} from "./Button/Button";
 import {NewComponents} from "./NewComponents";
+import {subscribe} from "diagnostics_channel";
 
 function App() {
-/*
+
+    const Button1Foo = (subscriber: string, age: number) => {
+        console.log(subscriber, age)
+    }
+    const Button2Foo = (subscriber: string) => {
+        console.log(subscriber)
+    }
+
+    const Button3Foo = () => {
+        console.log('Im stupid button')
+    }
     return (
-        <div className="App">
-            <button>MyYouTubeChanel-1</button>
+        <div className={'App'}>
+
+            <Button name={'MyYouTubeChanel-1'} callBack={()=>Button1Foo('Im Vasya', 21)}/>
+            <Button name={'MyYouTubeChanel-2'} callBack={()=>Button2Foo('im ivan')}/>
+            <Button name={'stupid'} callBack={Button3Foo}/>
+
         </div>
     );
-*/
+}
 
-    /*
+
+/*
+
+
+
       let [students, setStudents] = useState([
             {id: 1, name: "James", age: 8},
             {id: 2, name: "Robert", age: 18},
@@ -30,7 +51,7 @@ function App() {
           <NewComponents students={students}/>
       );
     }
-    */
+
     const [topCars, setTopCars] = useState([
             {id: 1, manufacturer: 'BMW', model: 'm5cs'},
             {id: 2, manufacturer: 'Mercedes', model: 'e63s'},
@@ -43,5 +64,6 @@ function App() {
 }
 
 
+*/
 
 export default App;
