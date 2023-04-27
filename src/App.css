@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+table { border-collapse: collapse; width: 50vw; }
+th { text-align: left; }
+td { padding: 0.25rem; border: 1px solid #efefef; }
